@@ -146,8 +146,8 @@
           >
           <a
             class="text-on-surface/70 hover:text-primary transition-colors"
-            href="#locations"
-            >Locations</a
+            href="#location"
+            >Location</a
           >
           <a
             class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-md hover:scale-95 transition-transform active:opacity-80"
@@ -182,8 +182,8 @@
           >
           <a
             class="text-on-surface/80 hover:text-primary transition-colors"
-            href="#locations"
-            >Locations</a
+            href="#location"
+            >Location</a
           >
           <a
             class="mt-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-5 py-3 rounded-md text-center"
@@ -440,7 +440,7 @@
         </div>
       </section>
       <!-- About / Our Story -->
-      <section class="py-24 px-6 overflow-hidden" id="story">
+      <section class="py-24 px-6 overflow-hidden scroll-mt-28" id="story">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div class="order-2 md:order-1">
             <span
@@ -531,7 +531,10 @@
         </div>
       </section>
       <!-- Signature Pizzas -->
-      <section class="bg-surface-container-low py-24 px-6" id="menu">
+      <section
+        class="bg-surface-container-low py-24 px-6 scroll-mt-28"
+        id="menu"
+      >
         <div class="max-w-7xl mx-auto">
           <div
             class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
@@ -667,7 +670,7 @@
         </div>
       </section>
       <!-- Find Us Section -->
-      <section class="py-24 px-6 bg-surface" id="locations">
+      <section class="py-24 px-6 bg-surface scroll-mt-28" id="location">
         <div class="max-w-7xl mx-auto">
           <div
             class="grid md:grid-cols-2 gap-0 overflow-hidden rounded-xl editorial-shadow"
@@ -853,9 +856,19 @@
         });
 
         mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
+          link.addEventListener("click", (event) => {
+            const href = link.getAttribute("href") || "";
+
             mobileMenu.classList.add("hidden");
             mobileMenuButton.setAttribute("aria-expanded", "false");
+
+            if (href.startsWith("#")) {
+              const target = document.querySelector(href);
+              if (target) {
+                event.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }
           });
         });
       }
