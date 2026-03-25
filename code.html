@@ -1,0 +1,645 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Coba Pizzeria | Pizza al Estilo Mexicano</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,700;0,800;0,900;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#ffb3ac",
+              "on-primary-container": "#fff2f0",
+              "primary-fixed": "#ffdad6",
+              "on-tertiary-fixed": "#410004",
+              surface: "#fcf9f8",
+              "on-secondary-container": "#6c5000",
+              "secondary-fixed": "#ffdf9e",
+              "on-tertiary-container": "#fff2f1",
+              secondary: "#785900",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#410003",
+              background: "#fcf9f8",
+              "tertiary-container": "#c54240",
+              "surface-dim": "#dcd9d9",
+              "primary-container": "#d32f2f",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e5e2e1",
+              "on-secondary-fixed-variant": "#5b4300",
+              "tertiary-fixed-dim": "#ffb3ad",
+              "secondary-fixed-dim": "#fabd00",
+              "on-background": "#1c1b1b",
+              "primary-fixed-dim": "#ffb3ac",
+              "surface-container": "#f0edec",
+              "outline-variant": "#e4beba",
+              outline: "#8f6f6c",
+              "on-primary-fixed-variant": "#930010",
+              "surface-container-low": "#f6f3f2",
+              "secondary-container": "#fdc003",
+              "tertiary-fixed": "#ffdad7",
+              "on-secondary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#8b171c",
+              "on-secondary-fixed": "#261a00",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#5b403d",
+              tertiary: "#a32a2a",
+              error: "#ba1a1a",
+              "surface-bright": "#fcf9f8",
+              "surface-tint": "#ba1a20",
+              primary: "#af101a",
+              "surface-container-high": "#ebe7e7",
+              "surface-variant": "#e5e2e1",
+            },
+            fontFamily: {
+              headline: ["Epilogue"],
+              body: ["Plus Jakarta Sans"],
+              label: ["Plus Jakarta Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .editorial-shadow {
+        box-shadow: 0px 48px 48px -12px rgba(175, 16, 26, 0.08);
+      }
+      .asymmetric-radius {
+        border-top-left-radius: 2rem;
+      }
+      .text-glow {
+        text-shadow: 0 0 15px rgba(253, 192, 3, 0.4);
+      }
+    </style>
+  </head>
+  <body
+    id="top"
+    class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <a
+          class="inline-flex items-center gap-3 group"
+          href="#top"
+          aria-label="Coba Pizzeria Home"
+        >
+          <img
+            alt="Coba Pizzeria circular logo"
+            class="w-12 h-12 rounded-full object-cover border-2 border-secondary/30 shadow-md"
+            src="./circular-badge-logo-for-a-mexican-style-pizzeria-c.png"
+          />
+          <span
+            class="font-headline font-black tracking-tighter text-lg md:text-xl text-on-surface group-hover:text-primary transition-colors"
+            >Coba Pizzeria</span
+          >
+        </a>
+        <!-- Desktop Navigation -->
+        <div
+          class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight text-sm uppercase"
+        >
+          <a
+            class="text-primary font-extrabold border-b-2 border-primary"
+            href="#menu"
+            >Menu</a
+          >
+          <a
+            class="text-on-surface/70 hover:text-primary transition-colors"
+            href="#story"
+            >Our Story</a
+          >
+          <a
+            class="text-on-surface/70 hover:text-primary transition-colors"
+            href="#locations"
+            >Locations</a
+          >
+          <a
+            class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-md hover:scale-95 transition-transform active:opacity-80"
+            href="online-orders.html"
+            >Order Now</a
+          >
+        </div>
+        <!-- Mobile Menu Icon (Placeholder) -->
+        <button class="md:hidden text-on-surface">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16"
+      >
+        <!-- Hero Image Background -->
+        <div class="absolute inset-0 z-0">
+          <img
+            alt=""
+            class="w-full h-full object-cover brightness-[0.4] scale-105"
+            data-alt="Close-up of artisan Mexican pizza with chorizo, jalapeños, and avocado crema swirls on dark stone surface with moody lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz9rxJFc93v_DkFgAnb8ohzshD018oSCv-KdOpA4wXN9hBqKku98dzWRjAeJpCT0ntCFcJiFQcbB42Y0LCQ-gzcmqP2UHSECaT1wgIyxYtR1EqWCSYgLtwQ1uu6k3KcmL3b9XYpci27YDmhjd3Q7gB8PLSspQ2pqHrez9YzB9km1mqu_QR_jJNxni85AcKylJrAAlxsjbn0fmeBm25B9jds3rnx2QYA7kmNVss4SA_1MaXLYcJa-PNxLac0Fs7DSV5-dHQglZ6cBk"
+          />
+        </div>
+        <div class="relative z-10 container mx-auto px-6 text-center">
+          <!-- Circular Badge Logo -->
+          <div
+            class="inline-flex items-center justify-center w-40 h-40 md:w-52 md:h-52 bg-black rounded-full mb-8 editorial-shadow border-4 border-secondary/20"
+          >
+            <img
+              alt="Coba Pizzeria circular badge logo"
+              class="w-full h-full object-cover rounded-full"
+              src="./circular-badge-logo-for-a-mexican-style-pizzeria-c.png"
+            />
+          </div>
+          <h1
+            class="font-headline font-black text-6xl md:text-8xl lg:text-9xl text-white mb-6 tracking-tighter italic"
+          >
+            Pizza al Estilo
+            <span class="text-secondary-container text-glow">Mexicano</span>
+          </h1>
+          <p
+            class="max-w-xl mx-auto text-surface-container-highest text-lg md:text-xl mb-10 font-medium"
+          >
+            The heat of Mexico meets the soul of New York. Hand-stretched dough,
+            heritage ingredients, and the heartbeat of Queens.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a
+              class="w-full sm:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-sm tracking-widest uppercase rounded-md shadow-xl hover:scale-105 transition-transform"
+              href="online-orders.html"
+            >
+              Order Now
+            </a>
+            <a
+              class="w-full sm:w-auto px-10 py-4 border-2 border-white/30 text-white font-headline font-bold text-sm tracking-widest uppercase rounded-md backdrop-blur-sm hover:bg-white/10 transition-colors"
+              href="menu.html"
+            >
+              See Our Menu
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Why Us / Badges -->
+      <section class="bg-surface-container-low py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="flex flex-col items-center text-center group">
+              <div
+                class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-on-secondary-container"
+                  data-weight="fill"
+                  >star</span
+                >
+              </div>
+              <span
+                class="font-headline font-extrabold text-on-surface tracking-tight uppercase text-sm"
+                >5.0 Stars</span
+              >
+            </div>
+            <div class="flex flex-col items-center text-center group">
+              <div
+                class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-on-secondary-container"
+                  data-weight="fill"
+                  >local_pizza</span
+                >
+              </div>
+              <span
+                class="font-headline font-extrabold text-on-surface tracking-tight uppercase text-sm"
+                >Mexican-Style</span
+              >
+            </div>
+            <div class="flex flex-col items-center text-center group">
+              <div
+                class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-on-secondary-container"
+                  data-weight="fill"
+                  >delivery_dining</span
+                >
+              </div>
+              <span
+                class="font-headline font-extrabold text-on-surface tracking-tight uppercase text-sm"
+                >Takeaway &amp; Delivery</span
+              >
+            </div>
+            <div class="flex flex-col items-center text-center group">
+              <div
+                class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-on-secondary-container"
+                  data-weight="fill"
+                  >location_on</span
+                >
+              </div>
+              <span
+                class="font-headline font-extrabold text-on-surface tracking-tight uppercase text-sm"
+                >LIC, Queens</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About / Our Story -->
+      <section class="py-24 px-6 overflow-hidden" id="story">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div class="order-2 md:order-1">
+            <span
+              class="text-primary font-headline font-black tracking-widest uppercase text-xs mb-4 block"
+              >Our Origin</span
+            >
+            <h2
+              class="font-headline font-black text-5xl md:text-6xl text-on-surface mb-8 tracking-tighter leading-[0.9]"
+            >
+              Born in Queens. <br />Inspired by Mexico. <br /><span
+                class="text-secondary italic"
+                >100% addictive.</span
+              >
+            </h2>
+            <div
+              class="space-y-6 text-on-surface-variant text-lg leading-relaxed"
+            >
+              <p>
+                Coba Pizzeria is the intersection of two worlds. We've taken the
+                structural perfection of a New York slice and infused it with
+                the vibrant, spicy, and soulful flavors of a Mexico City street
+                market.
+              </p>
+              <p>
+                From our house-made chorizo to our slow-simmered birria
+                toppings, every pizza is a celebration of the multicultural
+                energy that makes Long Island City home. We don't just make
+                pizza; we create a new category of comfort food.
+              </p>
+            </div>
+            <div class="mt-10">
+              <a
+                class="inline-flex items-center gap-2 font-headline font-bold text-on-surface hover:text-primary transition-colors group"
+                href="#story"
+              >
+                Read the full story
+                <span
+                  class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="order-1 md:order-2 relative">
+            <div
+              class="absolute -top-6 -left-6 w-32 h-32 bg-primary-container z-0"
+            ></div>
+            <img
+              alt=""
+              class="relative z-10 w-full h-[500px] object-cover asymmetric-radius editorial-shadow"
+              data-alt="Moody indoor shot of a busy kitchen with chef preparing dough, warm ambient lighting, rustic brick background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz5uzqXKxu9TsZaowkRn3RZsnqtXShH_wmHoIsGH_OEA3YXJMpLsdMiD7350uB8eidHqTzj4nbccHpazZfqqagQ2iezXv9Gp3hLRLRYAYVzZL1k_X4RtBu8YpYcVL-SG_FPmk-TzdwFKV2IRs8r2cTrGJSJgikSEj5WhQUORkbzWOSP9Ey_6hhntboZC2NuVJFl5cN7ncV_rDKCdAN3jt1bBJ4PN_u-pjovEfkjbmy22OMM8aZnu_3-IAKopclGEGImlTgyNMs6OQ"
+            />
+            <div
+              class="absolute -bottom-10 -right-10 hidden md:block w-48 h-48 border-8 border-secondary/20 z-0"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Signature Pizzas -->
+      <section class="bg-surface-container-low py-24 px-6" id="menu">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+          >
+            <div>
+              <span
+                class="text-primary font-headline font-black tracking-widest uppercase text-xs mb-4 block"
+                >The Lineup</span
+              >
+              <h2
+                class="font-headline font-black text-5xl md:text-7xl text-on-surface tracking-tighter leading-none"
+              >
+                Signature <br />Slices
+              </h2>
+            </div>
+            <p class="max-w-xs text-on-surface-variant font-medium">
+              Crafted with premium masa-infused dough and topped with locally
+              sourced Mexican ingredients.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="bg-black rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div class="h-80 overflow-hidden relative">
+                <img
+                  alt=""
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
+                  data-alt="Gourmet Al Pastor pizza with marinated pork, charred pineapple, and cilantro on a dark wooden board"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyNtF8iixksHJJoOWCmbjOrxp_f0C1sNG8H_4kHrEEGl5h-7z8cj6D0KK3SKpu2Zpwsi93guoHKiC4m8WTjB_fOMi_iuEJ1o2ofLRmyAszlf1PsWx9s-TD2wP0FhgIsWYviw0oHDEXbrddgbZ2PvgjKlhp4Pro3SDRQY9CpVt8Uh3_OFQFUt7wKeH2W0PPacZxGqGKnuxyrZgDCNsGCh_Ddh9kY1JnN5peV0HBtzfBjoqX6056UT2v5LSwNON94wuIupOqopsG9v4"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-primary text-white font-headline font-bold text-[10px] uppercase px-3 py-1 tracking-widest"
+                >
+                  Best Seller
+                </div>
+              </div>
+              <div class="p-8">
+                <h3
+                  class="font-headline font-black text-white text-3xl mb-2 tracking-tight"
+                >
+                  Al Pastor
+                </h3>
+                <p class="text-on-surface-variant/80 text-sm mb-6">
+                  Marinated pork, fresh pineapple, cilantro, and onions with a
+                  smoky guajillo sauce.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary-container font-headline font-bold text-xl"
+                    >$24</span
+                  >
+                  <button
+                    class="text-white border-b-2 border-primary hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
+                  >
+                    Add to Order
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-black rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div class="h-80 overflow-hidden relative">
+                <img
+                  alt=""
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
+                  data-alt="Spicy chorizo and black bean pizza with jalapeños and dollops of fresh queso on dark background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEBjhxC8R0HqyTmv9ym-y5e7P18gBzB-Z5i6mJKAJRztWCbPWbJP3J71tfsCafMaYrNmZ757kil1Wfc426-I9J3ZW3U29q19CVxrJdNJ6j2KGxAQ_tPqc8I_9Xrraffmp_4TdkKmJ0nEzyoS_yV5IIs_frMTNMT9vvfOEOpJT6ivS1RgfmnxYmCM2gvr_7I0aGOyrQJiAnVshLxrTB8-v88iNOQ-DKPn8AzRJ8ct2brIDlCTd-n4Hqh3mROdyOr7qc7BjBGqwadyk"
+                />
+              </div>
+              <div class="p-8">
+                <h3
+                  class="font-headline font-black text-white text-3xl mb-2 tracking-tight"
+                >
+                  Chorizo &amp; Bean
+                </h3>
+                <p class="text-on-surface-variant/80 text-sm mb-6">
+                  House-made spicy chorizo, black bean purée, pickled jalapeños,
+                  and Chihuahua cheese.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary-container font-headline font-bold text-xl"
+                    >$22</span
+                  >
+                  <button
+                    class="text-white border-b-2 border-primary hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
+                  >
+                    Add to Order
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-black rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div class="h-80 overflow-hidden relative">
+                <img
+                  alt=""
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
+                  data-alt="Fresh vegetarian pizza with avocado slices, green salsa verde, and cotija cheese in dark editorial lighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfhOULyoC76pUFPlcvYSRwwmmP4FIJTcYD9Uzo8d0klsBPf_v-7QPDZtPy6nssu-DcnggaER3ATLlRBD0P94oacX9PnVqlBJ6XmUsmSVb_E_bmR9oOe5uZxRcjPEhv5mm9fUfW4EhiU1922wfevTd91-VS8eox82aUlxFJAR5hqI3jGmhvuFOsWIQIwBMAPm3UbC3050YepHnYb4JFTar0tjXWN8PkypIZy86Ti6YQJ7krMgyAfKKZ0eVbI9yWj7nR252czjSkVTE"
+                />
+              </div>
+              <div class="p-8">
+                <h3
+                  class="font-headline font-black text-white text-3xl mb-2 tracking-tight"
+                >
+                  Avocado Verde
+                </h3>
+                <p class="text-on-surface-variant/80 text-sm mb-6">
+                  Fresh avocado slices, salsa verde, cotija cheese, and pumpkin
+                  seeds for a crunch.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-secondary-container font-headline font-bold text-xl"
+                    >$20</span
+                  >
+                  <button
+                    class="text-white border-b-2 border-primary hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
+                  >
+                    Add to Order
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Find Us Section -->
+      <section class="py-24 px-6 bg-surface" id="locations">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="grid md:grid-cols-2 gap-0 overflow-hidden rounded-xl editorial-shadow"
+          >
+            <div class="bg-black p-12 md:p-16 flex flex-col justify-center">
+              <h2
+                class="font-headline font-black text-5xl text-white mb-8 tracking-tighter"
+              >
+                Visit the Lab.
+              </h2>
+              <div class="space-y-10">
+                <div>
+                  <h4
+                    class="text-secondary font-headline font-bold uppercase text-xs tracking-widest mb-2"
+                  >
+                    Address
+                  </h4>
+                  <p class="text-white text-xl font-medium">
+                    40-05 Skillman Ave,<br />LIC, NY 11104
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    class="text-secondary font-headline font-bold uppercase text-xs tracking-widest mb-2"
+                  >
+                    Hours
+                  </h4>
+                  <p class="text-white text-lg font-medium">
+                    Daily: 10:30 AM – 11:59 PM
+                  </p>
+                </div>
+                <div>
+                  <h4
+                    class="text-secondary font-headline font-bold uppercase text-xs tracking-widest mb-2"
+                  >
+                    Phone
+                  </h4>
+                  <p
+                    class="text-white text-lg font-medium underline decoration-primary decoration-2 underline-offset-4"
+                  >
+                    929-233-6783
+                  </p>
+                </div>
+                <div class="flex gap-4 pt-4">
+                  <a
+                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-primary transition-colors"
+                    href="https://www.google.com/maps/place/Coba+Pizzeria/@40.747427,-74.2280669,11z/data=!4m6!3m5!1s0x89c25f00047813a5:0x17ce3934de335a68!8m2!3d40.747427!4d-73.923157!16s%2Fg%2F11q2z5w0fg?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="material-symbols-outlined">map</span>
+                  </a>
+                  <a
+                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-primary transition-colors"
+                    href="tel:+19292336783"
+                  >
+                    <span class="material-symbols-outlined">call</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="h-[400px] md:h-auto bg-surface-container-high">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d193450.47083547016!2d-74.22806690546875!3d40.74742699999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f00047813a5%3A0x17ce3934de335a68!2sCoba%20Pizzeria!5e0!3m2!1sen!2sfr!4v1774460082901!5m2!1sen!2sfr"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Coba Pizzeria Map"
+                class="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-black text-surface-container-highest border-t-4 border-secondary overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-12"
+      >
+        <div
+          class="flex flex-col items-center md:items-start text-center md:text-left"
+        >
+          <div
+            class="text-3xl font-black text-secondary mb-4 tracking-tighter uppercase italic"
+          >
+            Coba Pizzeria
+          </div>
+          <p class="max-w-xs text-sm opacity-60 font-body leading-relaxed">
+            Bringing the authentic heat of Mexican streets to the vibrant
+            neighborhoods of New York.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-8 md:gap-16 items-center font-headline font-bold text-sm tracking-wide"
+        >
+          <a
+            class="hover:text-primary transition-colors duration-200"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+          <a
+            class="hover:text-primary transition-colors duration-200"
+            href="privacy-policy.html"
+            >Privacy Policy</a
+          >
+          <a
+            class="hover:text-primary transition-colors duration-200"
+            href="terms-of-service.html"
+            >Terms of Service</a
+          >
+        </div>
+        <div class="text-center md:text-right">
+          <p class="text-sm opacity-60 mb-2">
+            © 2024 Coba Pizzeria. Born in Queens.
+          </p>
+          <div class="flex justify-center md:justify-end gap-2">
+            <span class="w-1 h-1 bg-secondary rounded-full"></span>
+            <span class="w-1 h-1 bg-secondary rounded-full"></span>
+            <span class="w-1 h-1 bg-secondary rounded-full"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Banner -->
+      <div class="bg-primary py-3 overflow-hidden whitespace-nowrap">
+        <div class="flex gap-10 animate-marquee">
+          <span
+            class="text-on-primary font-headline font-black italic tracking-tighter uppercase text-sm"
+            >Pizza al Estilo Mexicano — NYC — PIZZA AL ESTILO MEXICANO — NYC —
+            PIZZA AL ESTILO MEXICANO — NYC — PIZZA AL ESTILO MEXICANO — NYC —
+            PIZZA AL ESTILO MEXICANO — NYC — PIZZA AL ESTILO MEXICANO —
+            NYC</span
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- CSS for Marquee simulation -->
+    <style>
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-marquee {
+        animation: marquee 20s linear infinite;
+        display: inline-flex;
+        width: max-content;
+      }
+    </style>
+  </body>
+</html>

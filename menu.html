@@ -1,0 +1,418 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Menu | Coba Pizzeria</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,700;0,800;0,900;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#ffb3ac",
+              "on-primary-container": "#fff2f0",
+              "primary-fixed": "#ffdad6",
+              "on-tertiary-fixed": "#410004",
+              surface: "#fcf9f8",
+              "on-secondary-container": "#6c5000",
+              "secondary-fixed": "#ffdf9e",
+              "on-tertiary-container": "#fff2f1",
+              secondary: "#785900",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-fixed": "#410003",
+              background: "#fcf9f8",
+              "tertiary-container": "#c54240",
+              "surface-dim": "#dcd9d9",
+              "primary-container": "#d32f2f",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e5e2e1",
+              "on-secondary-fixed-variant": "#5b4300",
+              "tertiary-fixed-dim": "#ffb3ad",
+              "secondary-fixed-dim": "#fabd00",
+              "on-background": "#1c1b1b",
+              "primary-fixed-dim": "#ffb3ac",
+              "surface-container": "#f0edec",
+              "outline-variant": "#e4beba",
+              outline: "#8f6f6c",
+              "on-primary-fixed-variant": "#930010",
+              "surface-container-low": "#f6f3f2",
+              "secondary-container": "#fdc003",
+              "tertiary-fixed": "#ffdad7",
+              "on-secondary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#8b171c",
+              "on-secondary-fixed": "#261a00",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#5b403d",
+              tertiary: "#a32a2a",
+              error: "#ba1a1a",
+              "surface-bright": "#fcf9f8",
+              "surface-tint": "#ba1a20",
+              primary: "#af101a",
+              "surface-container-high": "#ebe7e7",
+              "surface-variant": "#e5e2e1",
+            },
+            fontFamily: {
+              headline: ["Epilogue"],
+              body: ["Plus Jakarta Sans"],
+              label: ["Plus Jakarta Sans"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .editorial-shadow {
+        box-shadow: 0px 48px 48px -12px rgba(175, 16, 26, 0.08);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/60"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <a
+          class="inline-flex items-center gap-3 group"
+          href="code.html"
+          aria-label="Back to home"
+        >
+          <img
+            alt="Coba Pizzeria circular logo"
+            class="w-12 h-12 rounded-full object-cover border-2 border-secondary/30 shadow-md"
+            src="./circular-badge-logo-for-a-mexican-style-pizzeria-c.png"
+          />
+          <span
+            class="font-headline font-black tracking-tighter text-lg md:text-xl text-on-surface group-hover:text-primary transition-colors"
+          >
+            Coba Pizzeria
+          </span>
+        </a>
+        <a
+          class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-md hover:scale-95 transition-transform active:opacity-80 font-headline font-bold text-sm uppercase tracking-wide"
+          href="online-orders.html"
+        >
+          Order Now
+        </a>
+      </div>
+    </nav>
+
+    <main class="pt-20">
+      <section
+        class="bg-surface-container-low py-20 px-6 border-b border-outline-variant/50"
+      >
+        <div class="max-w-7xl mx-auto text-center">
+          <div
+            class="inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-secondary/20 bg-black mb-6"
+          >
+            <img
+              alt="Coba Pizzeria circular badge logo"
+              class="w-full h-full rounded-full object-cover"
+              src="./circular-badge-logo-for-a-mexican-style-pizzeria-c.png"
+            />
+          </div>
+          <span
+            class="text-primary font-headline font-black tracking-widest uppercase text-xs mb-4 block"
+          >
+            Fresh. Bold. Addictive.
+          </span>
+          <h1
+            class="font-headline font-black text-5xl md:text-7xl text-on-surface tracking-tighter italic leading-[0.9]"
+          >
+            Full <span class="text-secondary">Menu</span>
+          </h1>
+          <p class="text-on-surface-variant mt-4 max-w-2xl mx-auto text-lg">
+            Mexican-inspired pies, sandwiches, pasta, comfort sides, and sweet
+            finishes.
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-surface py-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
+          <article
+            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
+          >
+            <h2
+              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
+            >
+              Signature Pizzas
+            </h2>
+            <div class="space-y-4">
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Al Pastor</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Marinated pork, pineapple, cilantro, guajillo sauce
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$24</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Chorizo &amp; Bean</p>
+                  <p class="text-on-surface-variant text-sm">
+                    House chorizo, black bean purée, jalapeños
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$22</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Avocado Verde</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Avocado, salsa verde, cotija, pepitas
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$20</span
+                >
+              </div>
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-on-surface font-bold">Birria Supreme</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Slow-braised birria, pickled onion, crema
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$25</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
+          >
+            <h2
+              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
+            >
+              Sandwiches &amp; Tortas
+            </h2>
+            <div class="space-y-4">
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Milanesa Torta</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Crispy cutlet, refried beans, avocado, chipotle mayo
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$15</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Pollo Asado Sandwich</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Grilled chicken, roasted peppers, melted cheese
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$14</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Choriqueso Melt</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Spicy chorizo, queso blend, caramelized onions
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$16</span
+                >
+              </div>
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-on-surface font-bold">Veggie Cemita</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Grilled veggies, Oaxaca cheese, salsa macha
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$13</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
+          >
+            <h2
+              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
+            >
+              Pasta, Sides &amp; Desserts
+            </h2>
+            <div class="space-y-4">
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Chipotle Penne</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Creamy chipotle tomato sauce, parmesan
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$17</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">
+                    Garlic Spaghetti Verde
+                  </p>
+                  <p class="text-on-surface-variant text-sm">
+                    Garlic-herb oil, jalapeño basil, toasted crumbs
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$16</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Loaded Fries</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Queso, crema, pico de gallo, jalapeño
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$10</span
+                >
+              </div>
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-on-surface font-bold">Flan de Cajeta</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Traditional caramel custard with dulce drizzle
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$8</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
+          >
+            <h2
+              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
+            >
+              Drinks
+            </h2>
+            <div class="space-y-4">
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Horchata</p>
+                  <p class="text-on-surface-variant text-sm">
+                    House-made cinnamon rice milk
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$5</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Jamaica</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Hibiscus iced tea, tart and refreshing
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$5</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
+              >
+                <div>
+                  <p class="text-on-surface font-bold">Mexican Cola</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Classic glass-bottle cola
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$4</span
+                >
+              </div>
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-on-surface font-bold">Sparkling Water</p>
+                  <p class="text-on-surface-variant text-sm">
+                    Chilled mineral water
+                  </p>
+                </div>
+                <span class="text-primary font-headline font-bold text-xl"
+                  >$3</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-sm tracking-widest uppercase rounded-md shadow-xl hover:scale-105 transition-transform text-center"
+            href="online-orders.html"
+          >
+            Order Now
+          </a>
+          <a
+            class="px-8 py-4 border-2 border-primary/30 text-primary font-headline font-bold text-sm tracking-widest uppercase rounded-md hover:bg-primary/5 transition-colors text-center"
+            href="code.html"
+          >
+            Back Home
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
