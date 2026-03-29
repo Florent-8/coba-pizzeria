@@ -135,17 +135,30 @@
           class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight text-sm uppercase"
         >
           <a
-            class="text-primary font-extrabold border-b-2 border-primary"
+            class="border-b-2 pb-1 transition-colors text-primary font-extrabold border-primary"
+            data-nav-link="desktop"
+            data-section="home"
+            href="#home"
+            >Home</a
+          >
+          <a
+            class="border-b-2 pb-1 transition-colors text-on-surface/70 border-transparent hover:text-primary"
+            data-nav-link="desktop"
+            data-section="menu"
             href="#menu"
             >Menu</a
           >
           <a
-            class="text-on-surface/70 hover:text-primary transition-colors"
+            class="border-b-2 pb-1 transition-colors text-on-surface/70 border-transparent hover:text-primary"
+            data-nav-link="desktop"
+            data-section="story"
             href="#story"
             >Our Story</a
           >
           <a
-            class="text-on-surface/70 hover:text-primary transition-colors"
+            class="border-b-2 pb-1 transition-colors text-on-surface/70 border-transparent hover:text-primary"
+            data-nav-link="desktop"
+            data-section="location"
             href="#location"
             >Location</a
           >
@@ -174,14 +187,31 @@
         <div
           class="px-6 py-4 flex flex-col gap-3 font-headline font-bold text-sm uppercase bg-surface/95"
         >
-          <a class="text-primary font-extrabold" href="menu.html">Menu</a>
+          <a
+            class="text-primary font-extrabold"
+            data-nav-link="mobile"
+            data-section="home"
+            href="#home"
+            >Home</a
+          >
           <a
             class="text-on-surface/80 hover:text-primary transition-colors"
+            data-nav-link="mobile"
+            data-section="menu"
+            href="#menu"
+            >Menu</a
+          >
+          <a
+            class="text-on-surface/80 hover:text-primary transition-colors"
+            data-nav-link="mobile"
+            data-section="story"
             href="#story"
             >Our Story</a
           >
           <a
             class="text-on-surface/80 hover:text-primary transition-colors"
+            data-nav-link="mobile"
+            data-section="location"
             href="#location"
             >Location</a
           >
@@ -196,6 +226,7 @@
     <main>
       <!-- Hero Section -->
       <section
+        id="home"
         class="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-20 pb-16"
       >
         <!-- Hero Image Background -->
@@ -588,11 +619,6 @@
                     class="text-secondary-container font-headline font-bold text-xl"
                     >$24</span
                   >
-                  <button
-                    class="text-white border-b-2 border-primary hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
-                  >
-                    Add to Order
-                  </button>
                 </div>
               </div>
             </div>
@@ -623,11 +649,6 @@
                     class="text-secondary-container font-headline font-bold text-xl"
                     >$22</span
                   >
-                  <button
-                    class="text-white border-b-2 border-primary hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
-                  >
-                    Add to Order
-                  </button>
                 </div>
               </div>
             </div>
@@ -658,14 +679,17 @@
                     class="text-secondary-container font-headline font-bold text-xl"
                     >$20</span
                   >
-                  <button
-                    class="text-white border-b-2 border-primary hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
-                  >
-                    Add to Order
-                  </button>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="mt-10 flex justify-center">
+            <a
+              class="w-full sm:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-sm tracking-widest uppercase rounded-md shadow-xl hover:scale-105 transition-transform text-center"
+              href="menu.html"
+            >
+              See Full Menu
+            </a>
           </div>
         </div>
       </section>
@@ -830,8 +854,8 @@
             class="text-on-primary font-headline font-black italic tracking-tighter uppercase text-sm"
             >Pizza al Estilo Mexicano — NYC — PIZZA AL ESTILO MEXICANO — NYC —
             PIZZA AL ESTILO MEXICANO — NYC — PIZZA AL ESTILO MEXICANO — NYC —
-            PIZZA AL ESTILO MEXICANO — NYC — PIZZA AL ESTILO MEXICANO —
-            NYC</span
+            PIZZA AL ESTILO MEXICANO — NYC — PIZZA AL ESTILO MEXICANO — NYCPIZZA
+            AL ESTILO MEXICANO — NYC — PIZZA AL ESTILO MEXICANO — NYC</span
           >
         </div>
       </div>
@@ -870,30 +894,124 @@
       const storyExpandable = document.getElementById("story-expandable");
       const storyToggleLabel = document.getElementById("story-toggle-label");
       const storyToggleIcon = document.getElementById("story-toggle-icon");
+      const desktopNavLinks = Array.from(
+        document.querySelectorAll('[data-nav-link="desktop"]'),
+      );
+      const mobileNavLinks = Array.from(
+        document.querySelectorAll('[data-nav-link="mobile"]'),
+      );
+      const navSectionIds = ["home", "menu", "story", "location"];
+      const navSections = navSectionIds
+        .map((sectionId) => document.getElementById(sectionId))
+        .filter(Boolean);
+      const navElement = document.querySelector("nav");
+      let navLockSectionId = null;
+      let navLockTimeoutId = null;
+
+      const setActiveNavLink = (activeSectionId) => {
+        desktopNavLinks.forEach((link) => {
+          const isActive = link.dataset.section === activeSectionId;
+          link.classList.toggle("text-primary", isActive);
+          link.classList.toggle("font-extrabold", isActive);
+          link.classList.toggle("border-primary", isActive);
+          link.classList.toggle("text-on-surface/70", !isActive);
+          link.classList.toggle("border-transparent", !isActive);
+        });
+
+        mobileNavLinks.forEach((link) => {
+          const isActive = link.dataset.section === activeSectionId;
+          link.classList.toggle("text-primary", isActive);
+          link.classList.toggle("font-extrabold", isActive);
+          link.classList.toggle("text-on-surface/80", !isActive);
+        });
+      };
+
+      const getActiveSectionId = () => {
+        const activationLine = window.scrollY + 140;
+        let currentSectionId = "home";
+
+        [...navSections]
+          .sort((a, b) => a.offsetTop - b.offsetTop)
+          .forEach((section) => {
+            if (activationLine >= section.offsetTop) {
+              currentSectionId = section.id;
+            }
+          });
+
+        if (!navSections.length) {
+          navSectionIds.forEach((sectionId) => {
+            const section = document.getElementById(sectionId);
+            if (section && activationLine >= section.offsetTop) {
+              currentSectionId = sectionId;
+            }
+          });
+        }
+
+        return currentSectionId;
+      };
+
+      const updateActiveNavigation = () => {
+        if (navLockSectionId) {
+          setActiveNavLink(navLockSectionId);
+          return;
+        }
+        setActiveNavLink(getActiveSectionId());
+      };
+
+      const scrollToSection = (sectionId) => {
+        const target = document.getElementById(sectionId);
+        if (!target) return;
+
+        if (navLockTimeoutId) {
+          window.clearTimeout(navLockTimeoutId);
+        }
+
+        navLockSectionId = sectionId;
+        setActiveNavLink(sectionId);
+
+        const navOffset = (navElement?.offsetHeight || 0) + 12;
+        const targetTop = Math.max(
+          0,
+          target.getBoundingClientRect().top + window.scrollY - navOffset,
+        );
+
+        window.scrollTo({ top: targetTop, behavior: "smooth" });
+
+        navLockTimeoutId = window.setTimeout(() => {
+          navLockSectionId = null;
+          updateActiveNavigation();
+        }, 650);
+      };
+
+      updateActiveNavigation();
+      window.addEventListener("scroll", updateActiveNavigation, {
+        passive: true,
+      });
+      window.addEventListener("resize", updateActiveNavigation);
 
       if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener("click", () => {
           const isHidden = mobileMenu.classList.toggle("hidden");
           mobileMenuButton.setAttribute("aria-expanded", String(!isHidden));
         });
-
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", (event) => {
-            const href = link.getAttribute("href") || "";
-
-            mobileMenu.classList.add("hidden");
-            mobileMenuButton.setAttribute("aria-expanded", "false");
-
-            if (href.startsWith("#")) {
-              const target = document.querySelector(href);
-              if (target) {
-                event.preventDefault();
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-            }
-          });
-        });
       }
+
+      [...desktopNavLinks, ...mobileNavLinks].forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const sectionId = link.dataset.section;
+          if (!sectionId) return;
+
+          event.preventDefault();
+          scrollToSection(sectionId);
+
+          if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            if (mobileMenuButton) {
+              mobileMenuButton.setAttribute("aria-expanded", "false");
+            }
+          }
+        });
+      });
 
       if (toggleStoryButton && storyExpandable) {
         toggleStoryButton.addEventListener("click", () => {
