@@ -76,6 +76,9 @@
       .editorial-shadow {
         box-shadow: 0px 48px 48px -12px rgba(175, 16, 26, 0.08);
       }
+      .menu-card {
+        height: 100%;
+      }
     </style>
   </head>
   <body
@@ -144,253 +147,394 @@
       </section>
 
       <section class="bg-surface py-20 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
+        <div class="max-w-7xl mx-auto grid xl:grid-cols-12 gap-8">
           <article
-            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
+            class="menu-card bg-surface-container rounded-xl p-8 md:p-10 border border-outline-variant/50 xl:col-span-7"
           >
             <h2
               class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
             >
-              Signature Pizzas
+              Pizza
             </h2>
-            <div class="space-y-4">
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Al Pastor</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Marinated pork, pineapple, cilantro, guajillo sauce
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$24</span
-                >
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Al Pastor Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $25.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Tomato sauce, fresh mozzarella, marinated pork (al pastor),
+                  pineapple, cilantro, onions, and guacamole drizzle.
+                </p>
               </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Chorizo &amp; Bean</p>
-                  <p class="text-on-surface-variant text-sm">
-                    House chorizo, black bean purée, jalapeños
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$22</span
-                >
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Mexicana Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $24.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Tomato sauce, fresh mozzarella, Mexican sausage (chorizo),
+                  jalapeños, and onions.
+                </p>
               </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Avocado Verde</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Avocado, salsa verde, cotija, pepitas
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$20</span
-                >
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Chicken Tinga Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $22.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Tomato sauce, fresh mozzarella, chipotle chicken, and onions.
+                </p>
               </div>
-              <div class="flex items-start justify-between">
-                <div>
-                  <p class="text-on-surface font-bold">Birria Supreme</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Slow-braised birria, pickled onion, crema
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$25</span
-                >
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Tejana Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $24.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Refried beans, fresh mozzarella, Mexican sausage (chorizo),
+                  jalapeños, and onions.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Hawaiian Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $22.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Ham, tomato sauce, fresh mozzarella, and pineapple.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Margherita Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $15.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Tomato sauce, fresh mozzarella, parmesan, and basil.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Pepperoni Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $18.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Tomato sauce, fresh mozzarella, and pepperoni.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Veggie Pizza</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $21.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Tomato sauce, fresh mozzarella, bell peppers, black kalamata
+                  olives, mushrooms, and onions.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Grilled Chicken Fajita</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $25.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Tomato sauce, fresh mozzarella, grilled chicken, bell peppers,
+                  jalapeños, and onions.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">
+                  Nutella Strawberry &amp; Banana Calzone
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $18.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Nutella, strawberry, banana, and white sugar powder.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Coba Steak Asada</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $25.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  House-made cilantro pesto base topped with mozzarella and
+                  pepper jack cheese, charred steak, and fresh basil.
+                </p>
+              </div>
+              <div>
+                <p class="text-on-surface font-bold">Enmolada</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $20.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Rich mole poblano sauce, mozzarella, shredded chicken, onions,
+                  and cotija cheese.
+                </p>
               </div>
             </div>
           </article>
 
           <article
-            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
-          >
-            <h2
-              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
-            >
-              Sandwiches &amp; Tortas
-            </h2>
-            <div class="space-y-4">
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Milanesa Torta</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Crispy cutlet, refried beans, avocado, chipotle mayo
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$15</span
-                >
-              </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Pollo Asado Sandwich</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Grilled chicken, roasted peppers, melted cheese
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$14</span
-                >
-              </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Choriqueso Melt</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Spicy chorizo, queso blend, caramelized onions
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$16</span
-                >
-              </div>
-              <div class="flex items-start justify-between">
-                <div>
-                  <p class="text-on-surface font-bold">Veggie Cemita</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Grilled veggies, Oaxaca cheese, salsa macha
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$13</span
-                >
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
-          >
-            <h2
-              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
-            >
-              Pasta, Sides &amp; Desserts
-            </h2>
-            <div class="space-y-4">
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Chipotle Penne</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Creamy chipotle tomato sauce, parmesan
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$17</span
-                >
-              </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">
-                    Garlic Spaghetti Verde
-                  </p>
-                  <p class="text-on-surface-variant text-sm">
-                    Garlic-herb oil, jalapeño basil, toasted crumbs
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$16</span
-                >
-              </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Loaded Fries</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Queso, crema, pico de gallo, jalapeño
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$10</span
-                >
-              </div>
-              <div class="flex items-start justify-between">
-                <div>
-                  <p class="text-on-surface font-bold">Flan de Cajeta</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Traditional caramel custard with dulce drizzle
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$8</span
-                >
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="bg-surface-container rounded-xl p-8 border border-outline-variant/50"
+            class="menu-card bg-surface-container rounded-xl p-8 md:p-10 border border-outline-variant/50 xl:col-span-5"
           >
             <h2
               class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
             >
               Drinks
             </h2>
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Coke (12 fl oz)</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $2.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Classic Coca-Cola.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Diet Coke (12 fl oz)</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $2.50
+                </p>
+                <p class="text-on-surface-variant text-sm">Sugar-free cola.</p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Snapple (20 fl oz)</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $3.75
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Assorted iced tea flavors.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Aguas Frescas</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $7.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Fresh fruit-based house drink.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">
+                  Jarritos Tamarind (17.7 fl oz)
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $3.75
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Mexican soda, tamarind flavor.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">
+                  Jarritos Lime (17.7 fl oz)
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $3.75
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Mexican soda, lime flavor.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">
+                  Jarritos Mandarin (17.7 fl oz)
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $3.75
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Mexican soda, mandarin flavor.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">
+                  Jarritos Pineapple (17.7 fl oz)
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $3.75
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Mexican soda, pineapple flavor.
+                </p>
+              </div>
+              <h3
+                class="font-headline font-black text-on-surface text-2xl tracking-tight pt-2 md:col-span-2"
+              >
+                More Drinks
+              </h3>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Ginger Ale (12 fl oz)</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $2.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Crisp ginger soda.
+                </p>
+              </div>
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">
+                  Orange Sunkist (12 fl oz)
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $2.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Orange citrus soda.
+                </p>
+              </div>
+              <div>
+                <p class="text-on-surface font-bold">
+                  Poland Spring Water Bottle (16.9 fl oz)
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $2.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Bottled spring water.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="menu-card bg-surface-container rounded-xl p-8 md:p-10 border border-outline-variant/50 xl:col-span-6"
+          >
+            <h2
+              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
+            >
+              Burrito
+            </h2>
+            <p class="text-on-surface-variant text-sm mb-5">
+              Our signature flour tortilla stuffed with authentic Mexican rice,
+              hearty beans, fresh cilantro, onions, and creamy guacamole.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="border border-outline-variant/60 rounded-lg p-4">
+                <p class="text-on-surface font-bold">Carne Asada Burrito</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $18.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Flour tortilla with carne asada, rice, beans, cilantro,
+                  onions, and guacamole.
+                </p>
+              </div>
+              <div class="border border-outline-variant/60 rounded-lg p-4">
+                <p class="text-on-surface font-bold">Al Pastor Burrito</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $18.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Flour tortilla with al pastor, rice, beans, cilantro, onions,
+                  and guacamole.
+                </p>
+              </div>
+              <div class="border border-outline-variant/60 rounded-lg p-4">
+                <p class="text-on-surface font-bold">Chicken Burrito</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $18.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Flour tortilla with chicken, rice, beans, cilantro, onions,
+                  and guacamole.
+                </p>
+              </div>
+              <div class="border border-outline-variant/60 rounded-lg p-4">
+                <p class="text-on-surface font-bold">Chorizo Burrito</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $18.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Flour tortilla with chorizo, rice, beans, cilantro, onions,
+                  and guacamole.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="menu-card bg-surface-container rounded-xl p-8 md:p-10 border border-outline-variant/50 xl:col-span-6"
+          >
+            <h2
+              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
+            >
+              Taco Platter of 3
+            </h2>
+            <p class="text-on-surface-variant text-sm mb-5">
+              Three authentic yellow corn tortilla tacos with your choice of
+              protein. Each taco is topped with fresh cilantro, onions, and
+              creamy guacamole. Served with crisp radish slices and fresh lime.
+            </p>
             <div class="space-y-4">
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Horchata</p>
-                  <p class="text-on-surface-variant text-sm">
-                    House-made cinnamon rice milk
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$5</span
-                >
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Chicken Taco Platter</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $16.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Three chicken tacos with fresh toppings and lime.
+                </p>
               </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Jamaica</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Hibiscus iced tea, tart and refreshing
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$5</span
-                >
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Chorizo Taco Platter</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $16.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Three chorizo tacos with fresh toppings and lime.
+                </p>
               </div>
-              <div
-                class="flex items-start justify-between border-b border-outline-variant/60 pb-3"
-              >
-                <div>
-                  <p class="text-on-surface font-bold">Mexican Cola</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Classic glass-bottle cola
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$4</span
-                >
+              <div class="border-b border-outline-variant/60 pb-3">
+                <p class="text-on-surface font-bold">Al Pastor Taco Platter</p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $16.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Three al pastor tacos with fresh toppings and lime.
+                </p>
               </div>
-              <div class="flex items-start justify-between">
-                <div>
-                  <p class="text-on-surface font-bold">Sparkling Water</p>
-                  <p class="text-on-surface-variant text-sm">
-                    Chilled mineral water
-                  </p>
-                </div>
-                <span class="text-primary font-headline font-bold text-xl"
-                  >$3</span
-                >
+              <div>
+                <p class="text-on-surface font-bold">
+                  Carne Asada Taco Platter
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $16.50
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  Three carne asada tacos with fresh toppings and lime.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="menu-card bg-surface-container rounded-xl p-8 md:p-10 border border-outline-variant/50 xl:col-span-12"
+          >
+            <h2
+              class="font-headline font-black text-on-surface text-4xl tracking-tight mb-6"
+            >
+              Dessert
+            </h2>
+            <div class="space-y-4">
+              <div>
+                <p class="text-on-surface font-bold">
+                  Chocoflan (Chocolate Flan Cake)
+                </p>
+                <p class="text-primary font-headline font-bold text-sm">
+                  $8.00
+                </p>
+                <p class="text-on-surface-variant text-sm">
+                  A rich Mexican dessert with a moist chocolate cake base topped
+                  with smooth vanilla flan and finished with a layer of sweet
+                  caramel.
+                </p>
               </div>
             </div>
           </article>
