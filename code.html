@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Coba Pizzeria | Pizza al Estilo Mexicano</title>
+    <link rel="icon" type="image/png" href="./cropped_circle_image%20(1).png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,700;0,800;0,900;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
@@ -122,8 +123,8 @@
         >
           <img
             alt="Coba Pizzeria Logo"
-            class="w-12 h-12 rounded-full object-cover border-2 border-secondary/30 shadow-md"
-            src="./Coba%20Pizzeria%20Logo.jpg"
+            class="w-12 h-12 object-contain"
+            src="./cropped_circle_image%20(1).png"
           />
           <span
             class="font-headline font-black tracking-tighter text-lg md:text-xl text-on-surface group-hover:text-primary transition-colors"
@@ -253,16 +254,11 @@
           />
         </div>
         <div class="relative z-10 container mx-auto px-6 text-center">
-          <!-- Circular Badge Logo -->
-          <div
-            class="inline-flex items-center justify-center w-40 h-40 md:w-52 md:h-52 bg-black rounded-full mb-8 editorial-shadow border-4 border-secondary/20"
-          >
-            <img
-              alt="Coba Pizzeria Logo"
-              class="w-full h-full object-cover rounded-full"
-              src="./Coba%20Pizzeria%20Logo.jpg"
-            />
-          </div>
+          <img
+            alt="Coba Pizzeria Logo"
+            class="w-40 md:w-52 mx-auto mb-8 object-contain"
+            src="./cropped_circle_image%20(1).png"
+          />
           <h1
             class="font-headline font-black text-6xl md:text-8xl lg:text-9xl text-white mb-6 tracking-tighter italic"
           >
@@ -504,16 +500,14 @@
               class="space-y-6 text-on-surface-variant text-lg leading-relaxed"
             >
               <p>
-                Coba Pizzeria is the intersection of two worlds. We've taken the
-                structural perfection of a New York slice and infused it with
-                the vibrant, spicy, and soulful flavors of a Mexico City street
-                market.
+                Oscar’s story is one of passion and perseverance—starting as a
+                street vendor in Mexico City, he built a following with his
+                original recipe pizzas before taking a leap of faith and opening
+                his own pizzeria in Queens, New York.
               </p>
               <p>
-                From our house-made chorizo to our slow-simmered birria
-                toppings, every pizza is a celebration of the multicultural
-                energy that makes Long Island City home. We don't just make
-                pizza; we create a new category of comfort food.
+                Today, every slice reflects his journey, blending authentic
+                roots with the determination that turned his dream into reality.
               </p>
             </div>
             <div class="mt-10">
@@ -539,21 +533,28 @@
                   class="bg-surface-container-low border border-outline-variant/50 rounded-xl p-6 md:p-7 space-y-5 text-on-surface-variant text-base md:text-lg leading-relaxed"
                 >
                   <p>
-                    Coba Pizzeria started with one simple goal: build pizza that
-                    feels familiar but tastes unexpected. We blended New York
-                    structure with bold Mexican flavors, keeping quality and
-                    consistency at the center.
+                    Oscar’s journey began on the vibrant, bustling streets of
+                    Mexico City, where he stood behind a humble cart with
+                    nothing more than a handmade oven, a few fresh ingredients,
+                    and a recipe passed down through generations. Each pizza he
+                    crafted carried a piece of his story—authentic flavors,
+                    relentless passion, and the dream of something bigger.
                   </p>
                   <p>
-                    Every dough ball is hand-stretched, every sauce is made with
-                    intention, and every topping is chosen to bring contrast and
-                    balance. From Al Pastor to birria-inspired combinations,
-                    each pie is designed to be memorable.
+                    What started as a street-side hustle quickly became a local
+                    favorite. People didn’t just come for the food—they came for
+                    Oscar’s dedication, his warmth, and the unmistakable taste
+                    of something real. Through long days, late nights, and
+                    countless challenges, he never lost sight of his vision.
                   </p>
                   <p>
-                    We are proud to serve Long Island City and all of Queens,
-                    NYC with food that feels local, warm, and full of
-                    personality.
+                    Today, that same passion lives on in the heart of Queens,
+                    New York, where Oscar has opened the doors to his very own
+                    pizzeria. Every slice served is a tribute to where he came
+                    from and how far he’s come—a blend of tradition, hard work,
+                    and unwavering belief. Oscar’s story isn’t just about pizza.
+                    It’s about resilience, culture, and the courage to turn a
+                    dream into reality.
                   </p>
                 </div>
               </div>
@@ -563,12 +564,16 @@
             <div
               class="absolute -top-6 -left-6 w-32 h-32 bg-primary-container z-0"
             ></div>
-            <img
-              alt=""
+            <video
               class="relative z-10 w-full h-[500px] object-cover asymmetric-radius editorial-shadow"
-              data-alt="Moody indoor shot of a busy kitchen with chef preparing dough, warm ambient lighting, rustic brick background"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz5uzqXKxu9TsZaowkRn3RZsnqtXShH_wmHoIsGH_OEA3YXJMpLsdMiD7350uB8eidHqTzj4nbccHpazZfqqagQ2iezXv9Gp3hLRLRYAYVzZL1k_X4RtBu8YpYcVL-SG_FPmk-TzdwFKV2IRs8r2cTrGJSJgikSEj5WhQUORkbzWOSP9Ey_6hhntboZC2NuVJFl5cN7ncV_rDKCdAN3jt1bBJ4PN_u-pjovEfkjbmy22OMM8aZnu_3-IAKopclGEGImlTgyNMs6OQ"
-            />
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="Coba Pizzeria story video"
+            >
+              <source src="./our-story-video.mp4" type="video/mp4" />
+            </video>
             <div
               class="absolute -bottom-10 -right-10 hidden md:block w-48 h-48 border-8 border-secondary/20 z-0"
             ></div>
