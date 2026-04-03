@@ -571,6 +571,7 @@
               loop
               muted
               playsinline
+              webkit-playsinline
               preload="auto"
               aria-label="Coba Pizzeria story video"
             >
@@ -1106,6 +1107,11 @@
 
       const storyVideo = document.getElementById("story-video");
       if (storyVideo) {
+        storyVideo.muted = true;
+        storyVideo.defaultMuted = true;
+        storyVideo.autoplay = true;
+        storyVideo.playsInline = true;
+
         const setPlaybackSpeed = () => {
           storyVideo.playbackRate = 1.25;
         };
