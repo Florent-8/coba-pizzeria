@@ -571,6 +571,7 @@
               loop
               muted
               playsinline
+              preload="auto"
               aria-label="Coba Pizzeria story video"
             >
               <source src="./Coba-video-v2.mp4" type="video/mp4" />
@@ -1109,12 +1110,36 @@
           storyVideo.playbackRate = 1.25;
         };
 
+        const tryPlay = () => {
+          const playPromise = storyVideo.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {});
+          }
+        };
+
         if (storyVideo.readyState >= 1) {
           setPlaybackSpeed();
         } else {
           storyVideo.addEventListener("loadedmetadata", setPlaybackSpeed, {
             once: true,
           });
+        }
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  tryPlay();
+                }
+              });
+            },
+            { threshold: 0.35 },
+          );
+
+          observer.observe(storyVideo);
+        } else {
+          tryPlay();
         }
       }
     </script>
