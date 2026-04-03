@@ -214,7 +214,12 @@
             data-nav-link="mobile"
             data-section="menu"
             href="#menu"
-            >Menu</a
+            >Signature Slices</a
+          >
+          <a
+            class="text-on-surface/80 hover:text-primary transition-colors"
+            href="menu.html"
+            >Full Menu</a
           >
           <a
             class="text-on-surface/80 hover:text-primary transition-colors"
@@ -1111,6 +1116,7 @@
         storyVideo.defaultMuted = true;
         storyVideo.autoplay = true;
         storyVideo.playsInline = true;
+        storyVideo.load();
 
         const setPlaybackSpeed = () => {
           storyVideo.playbackRate = 1.25;
@@ -1121,6 +1127,12 @@
           if (playPromise && typeof playPromise.catch === "function") {
             playPromise.catch(() => {});
           }
+        };
+
+        const startStoryVideo = () => {
+          storyVideo.muted = true;
+          storyVideo.defaultMuted = true;
+          tryPlay();
         };
 
         if (storyVideo.readyState >= 1) {
@@ -1136,7 +1148,7 @@
             (entries) => {
               entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                  tryPlay();
+                  startStoryVideo();
                 }
               });
             },
@@ -1145,8 +1157,17 @@
 
           observer.observe(storyVideo);
         } else {
-          tryPlay();
+          startStoryVideo();
         }
+
+        document.addEventListener("pointerdown", startStoryVideo, {
+          once: true,
+          passive: true,
+        });
+        document.addEventListener("touchstart", startStoryVideo, {
+          once: true,
+          passive: true,
+        });
       }
     </script>
   </body>
