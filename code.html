@@ -565,17 +565,15 @@
               class="absolute -top-6 -left-6 w-32 h-32 bg-primary-container z-0"
             ></div>
             <video
+              id="story-video"
               class="relative z-10 w-full h-[500px] object-cover asymmetric-radius editorial-shadow"
               autoplay
-              muted
               loop
+              muted
               playsinline
               aria-label="Coba Pizzeria story video"
             >
-              <source
-                src="./SnapInsta.to_AQOK9mNdZL1_-pApbzS7id_b14eNTWbbY6VFJLlBFHfjgmcL0Jpu7Y7cuA6lWgHTL1PoNnnA9q42aXnPXzkXY89ACdojEYpVy6LDI7s%20(1).mp4"
-                type="video/mp4"
-              />
+              <source src="./Coba-video-v2.mp4" type="video/mp4" />
             </video>
             <div
               class="absolute -bottom-10 -right-10 hidden md:block w-48 h-48 border-8 border-secondary/20 z-0"
@@ -1103,6 +1101,21 @@
             if (storyToggleIcon) storyToggleIcon.classList.add("rotate-180");
           }
         });
+      }
+
+      const storyVideo = document.getElementById("story-video");
+      if (storyVideo) {
+        const setPlaybackSpeed = () => {
+          storyVideo.playbackRate = 1.25;
+        };
+
+        if (storyVideo.readyState >= 1) {
+          setPlaybackSpeed();
+        } else {
+          storyVideo.addEventListener("loadedmetadata", setPlaybackSpeed, {
+            once: true,
+          });
+        }
       }
     </script>
   </body>
